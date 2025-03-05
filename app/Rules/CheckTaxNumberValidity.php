@@ -11,6 +11,7 @@ class CheckTaxNumberValidity implements ValidationRule
 
     public function validate(string $attribute, mixed $value, Closure $fail): void
     {
+        // TODO: чтобы не было зависимости, нужно вынести в фасад
         /** @var CountryRepository $countryRepository */
         $countryRepository = resolve(CountryRepository::class);
 

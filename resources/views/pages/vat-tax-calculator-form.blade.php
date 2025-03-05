@@ -1,6 +1,7 @@
 @extends('layouts.default-layout')
 
 @push('styles')
+    {{-- TODO: так делать нельзя) --}}
     <style>
         form {
             display: grid;
