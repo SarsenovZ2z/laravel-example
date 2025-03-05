@@ -18,4 +18,9 @@ class ProductRepository
         return Product::query()->find($id);
     }
 
+    public function calculatePriceIncludingVatTax(Product $product, float $vat_tax): float
+    {
+        return $product->price * (1 + $vat_tax / 100);
+    }
+
 }
